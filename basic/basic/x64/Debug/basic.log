@@ -1,0 +1,6 @@
+﻿  mymath.cpp
+  Source.cpp
+C:\Users\luisv\OneDrive\Escritorio\cpluspluscourse\basic\basic\Source.cpp(14,6): warning C4101: 'a1': unreferenced local variable
+C:\Users\luisv\OneDrive\Escritorio\cpluspluscourse\basic\basic\Source.cpp(21,6): warning C4101: 'b1': unreferenced local variable
+  Generating Code...
+  basic.vcxproj -> C:\Users\luisv\OneDrive\Escritorio\cpluspluscourse\basic\x64\Debug\basic.exe

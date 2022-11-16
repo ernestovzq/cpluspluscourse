@@ -10,7 +10,7 @@ int main() {
 
 void uniform_initialization() {
 	/* C++ 98 */
-//Scalar Types
+	//Scalar Types
 	int a1;                              // uninitialized 
 	int a2 = 10;                         // copy initialization
 	int a3(5);                           // direct initialization

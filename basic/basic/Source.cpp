@@ -3,10 +3,12 @@
 
 void uniform_initialization();
 void pointers_references();
+void const_qualifier();
 
 int main() {
 	//uniform_initialization();
-	pointers_references();
+	//pointers_references();
+	const_qualifier();
 	return 0;
  }
 
@@ -107,5 +109,89 @@ void pointers_references() {
 	*  because always is binded         |
 	* 
 	*/
+
+}
+
+
+
+void print(const int* x) {
+	//*x = 10;							// error
+	std::cout << "X: " << *x << "\n";
+}
+void print(const int& x) {
+	//x = 10;							// error
+	std::cout << "X: " << x << "\n";
+}
+//function that returns by value
+std::string get_temporary(const char* p) {
+	std::string temp("Inside");
+	return temp;            // return lvalue by value
+	return p;               // create a temporary that will be returned by value
+	return "same as above"; // same as above
+}
+
+void const_qualifier() {
+				/* Const Qualifier */
+	/*
+	*It always need an initializer
+	*They replace macros
+	*	- Macros are not type-safe
+	*	- Macros does not have a scope
+	*/
+
+				/* Pointer to Constant*/
+	/*
+	* The pointer shold also be pointed to a constant
+	* We cannot modify the value through the pointer
+	* 
+	* The pointer IS NOT CONSTANT
+	*		- It can save different values
+	* 
+	* Assigning the address of a non-constant variable
+	*		- We cannot modify the value through the pointer
+	*		- Useful as arguments to functions
+	* 
+	* Read a pointer declaration
+	*		- From Right-to-Left
+	*/
+	const double PI{ 3.1415 };                       // Contant Variable
+	double eps{ 1e-6 };                              // Variable
+	const double* ptrd{ &PI };                       // Pointer to a constant 
+	ptrd = &eps;
+	std::cout << "*ptrd (eps): " << *ptrd << "\n";
+	//*ptrd = 1e-2;						             // ERROR
+	eps = 1e-2;
+	std::cout << "*ptrd (eps): " << *ptrd << "\n";
+	int x1{ 10 };
+	print(&x1);
+
+			/* Constant Pointer */
+	/*
+	* - We cannot change the address (the value of the pointer) once
+	*   it is assigned during declaration
+	*/
+	int* const ptr_const{&x1};                        // Needs to be initialized
+
+	/*Const with References*/
+	/*
+	*	-- Assigning a const reference to a literal --
+	*   References qualified with const, it can be created to a literal
+	*   The compiler internally creates a temporary object initialized with
+	*   the literal, and makes the reference point to it. This object will 
+	*   be destroyed when the referenced is destroyed.
+	* 
+	*   -- Assigning a 'temporary' returned from a function
+	*	It is known a "life extension", it only applies with const references
+	*	and is used for any function that returns by value, the const reference
+	*	will extend the lifetime of the 'temporary' that is created from the
+	*	return value of the function
+	* 
+	*   -- Useful as arguments to functions --
+	*   To avoid modifying an object, better syntax than pointers to constant
+	*	They are more suitable when used with objects
+	*/
+	const int& INF = 1e9;
+	const std::string& out =  get_temporary("Hi");
+	print(x1);
 
 }

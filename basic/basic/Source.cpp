@@ -5,12 +5,14 @@ void uniform_initialization();
 void pointers_references();
 void const_qualifier();
 void auto_keyword();
+void rangebased_for();
 
 int main() {
 	//uniform_initialization();
 	//pointers_references();
 	//const_qualifier();
-	auto_keyword();
+	//auto_keyword();
+	rangebased_for();
 	return 0;
  }
 
@@ -217,4 +219,48 @@ void auto_keyword() {
 				/* Initializer List*/
 	auto l= { 1,2,3,4,5 };
 	auto i{ 1 };
+}
+
+void rangebased_for() {
+				/* Range-Based For*/
+	/*
+	* Allows iteration over arrays and containers
+	* Each iteration returns a copy of the element
+	* It can be used with l-values and r-values
+	* 
+	*  -- It can be used for any object that behaves like a range --
+	* It is necessary to provide iterators
+	* begin() and end() functions suppported that return iterators
+	* Operations required for the iterations: !=,++
+	*/
+
+				/*Using Range-Based for*/
+	int arr[]{ 2,4,6,8,10 };
+	for (int &v : arr) {
+		v+=2;
+	}
+				/*Internally Working for arrays*/
+	/*
+	* It is used forwarding reference to accept l-values and r-values
+	* 
+	*    --forwarding reference (auto && or T &&) --
+	* It is an r-value reference, that is declared in context of automatic
+	* type deduction. the final type will depend on the source type. If the
+	* source is r-value, the type will be r-value, it also preserves any
+	* qualifiers
+	* 
+	*/
+	auto&& range = arr;
+
+	/*
+	* begin() and end() are usually provided by ranges, a simple array
+	* is a range, all containers in c++ have their own functions.
+	*/
+	auto begin = std::begin(range);
+	auto end = std::end(range);
+	for (; begin != end; ++begin) {
+		auto v = *begin;
+		std::cout << v << ",";
+	}
+
 }

@@ -4,11 +4,13 @@
 void uniform_initialization();
 void pointers_references();
 void const_qualifier();
+void auto_keyword();
 
 int main() {
 	//uniform_initialization();
 	//pointers_references();
-	const_qualifier();
+	//const_qualifier();
+	auto_keyword();
 	return 0;
  }
 
@@ -194,4 +196,25 @@ void const_qualifier() {
 	const std::string& out =  get_temporary("Hi");
 	print(x1);
 
+}
+
+void auto_keyword() {
+				/* Auto keyword*/
+	/*
+	* Used to declare a variable without specifying the type
+	* They are useful with lambda expressions and templates
+	*/
+
+				/* Used  With Pointers*/
+	int x = 10;
+
+	auto ptr = &x;              // int*
+	auto* ptr1 = &x;            // int*
+
+	const auto ptr2 = &x;   // int *const
+	const auto* ptr3 = &x; // const int *
+
+				/* Initializer List*/
+	auto l= { 1,2,3,4,5 };
+	auto i{ 1 };
 }

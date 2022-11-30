@@ -1,0 +1,7 @@
+﻿  mymath.cpp
+  Source.cpp
+C:\Users\luisv\OneDrive\Escritorio\cpluspluscourse\01basic\basic\Source.cpp(24,6): warning C4101: 'a1': unreferenced local variable
+C:\Users\luisv\OneDrive\Escritorio\cpluspluscourse\01basic\basic\Source.cpp(31,6): warning C4101: 'b1': unreferenced local variable
+C:\Users\luisv\OneDrive\Escritorio\cpluspluscourse\01basic\basic\Source.cpp(199,17): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+  Generating Code...
+  basic.vcxproj -> C:\Users\luisv\OneDrive\Escritorio\cpluspluscourse\01basic\x64\Debug\basic.exe

@@ -87,3 +87,36 @@ void c_dynamic_memory_functions() {
 	* be freed manually by the programmer.
 	*/
 }
+
+
+/* DYNAMIC MEMORY ALLOCATION IN C++
+* new
+*	- Operator that allocates the memory on the heap
+*	- It only requires the type name, not the size
+*	- It includes initialization, but it is optional
+*	- Used with classes, new can call the constructors during allocation
+*	- It throws ans exception if it fails to allocate memory
+* 
+* delete
+*	- Deallocates the memory from the heap
+*/
+
+void dynamic_memory_operators() {
+	int* ptr = new int(12);			//initialize the memory during allocation
+	std::cout << *ptr << "\n";
+	delete ptr;                     //freeing the memory, ptr is a dangling pointer now
+	ptr = nullptr;                  //to avoid leak memory
+}
+
+/**
+* malloc:                              |  new:
+* - function                           | - operator
+* - requires size during allocation    | - size is ascertained from the type
+* - cannot initialize memory           | - can initialize memory
+* - cannot call constructors           | - it can call constructors
+* - returns void pointer and needs to  | - returns the correct type of pointer
+*   be type casted                     |
+* - cannot be customized               | - Customized (through operator overloading)
+* - if fails allocation returns NULL   | - if fails allocation throws and exception
+* - malloc/realloc/calloc              | - new, new[]
+*/

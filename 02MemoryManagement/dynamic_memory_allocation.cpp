@@ -120,3 +120,80 @@ void dynamic_memory_operators() {
 * - if fails allocation returns NULL   | - if fails allocation throws and exception
 * - malloc/realloc/calloc              | - new, new[]
 */
+
+
+/*                    new[] / delete[]
+* 
+* Used for allocationg dynamic arrays 
+*/
+
+void new_arrays() {
+	int* p = new int[5]{ 1,2,3,4,5 }; //array immediately initalized
+	//delete p;                       //without [] may not delete the entire array
+	delete[] p;                       //now p is a dangling pointer
+	p = nullptr;                      //because is the last line, it is no necessary,
+	                                  // the pointer 'p' is gonna be destroyed
+	
+	char* s = new char[4];
+	strcpy_s(s,4,"C++");
+	std::cout << s << "\n";
+	delete[] s;
+}
+
+
+void new_2Darrays() {
+	//2D arrays 
+	/*
+	* - In the memory are represented as a contiguous 1D array
+	* - Because of the creation syntax [][], the compiler allows
+	*	us to use the row-column syntax to access individual elements
+	*/
+	int data[2][3]{ 1,2,3,4,5,6 }; 
+	int* p_data = &data[0][0];
+	int size_data = sizeof(data) / sizeof(int);
+	while (size_data--) {
+		std::cout << *p_data << ",";
+		++p_data;
+	}
+	std::cout << std::endl;
+	std::cout << std::endl;
+	//2D arrays on the heap
+	/*
+	* - It is different, each row has to be an independent 1D array
+	*   meaning all the elements are not contiguous
+	* 
+	* - To free the memory, we have to free it in the same order 
+	*   in which you allocated it
+	*	(The number of delete calls, should match the number of
+	*	 new calls) 
+	*/
+	int* r1 = new int[3]{ 1,2,3 };
+	int* r2 = new int[3]{ 4,5,6 };
+	int** arr = new int* [2]{ r1,r2 };
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 3; j++) {
+			std::cout << arr[i][j] << " ";
+		}
+		std:: cout << "\n";
+	}
+	std::cout << std::endl;
+
+	delete[] r1;          // delete[] arr[0];
+	delete[] arr[1];      // delete[] r2;
+	delete[] arr;
+	r1 = nullptr;
+	r2 = nullptr; 
+
+	//generic 2D array
+	int N = 10, M = 5;
+	arr = new int* [N];
+	for (int i = 0; i < N; i++) {
+		int* r = new int[M];
+		arr[i] = r;
+		for (int j = 0; j < M; j++) {
+			arr[i][j] = M * i + j + 1;
+			std::cout << arr[i][j] << " ";
+		}
+		std::cout << std::endl;
+	}
+}

@@ -39,11 +39,50 @@
 *  > Memory Leak
 *  > Shallow Copy
 */
-Integer::Integer()
-{
-	std::cout << "Integer()" << std::endl;
-	ptr = new int{ 0 };
-}
+
+/*                      Default & Delete Functions
+* 
+* 
+*                default keyword
+* 
+* We can request the compiler to generate a default implementation of some functions
+* 
+* Example of use:
+*	If we have created parametrized constructor, the compiler will not synthesize one
+*   to force the compiler to synthesize it, we can declare it like this:
+* 
+*   Integer() = default;
+*
+* We can use the 'default' keyword only for those functions that can be synthesized by
+* the compiler:
+*    > Constructor
+*    > Destructor
+*    > Copy Constructor
+*    > Assignment Operator
+* 
+* 
+* 
+* 
+* 
+*                 delete keyword
+* 
+* Unlike default, delete can be used to any kind of function
+* 
+* Example of use:
+*      We can delete the copy operations, in that way no one can create a copy of our objects
+*      
+*      Integer(const Integer&) = delete;
+*      Integer operator=(const Integer&)  = delete;
+* 
+*      Now the compiler will not synthesize those operations, if we just don't define them, the
+*      compiler would had synthesize them and allowing copy the objects
+* 
+* Example of use:
+*     To prevent the compiler to implicit cast int-doble, int-float
+*      
+*      void set_value(float) = delete;
+*      void set_value(double) = delete;
+*/
 
 Integer::Integer(int value)
 {

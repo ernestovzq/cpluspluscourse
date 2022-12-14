@@ -4,13 +4,17 @@
 #include <iostream>
 
 void oop_example();
+void delegating_constructor();
 void copy_constructor_shallow_copy();
 void copy_constructor_deep_copy();
+void default_delete();
 
 int main() {
 	//oop_example();
+	//delegating_constructor();
     //copy_constructor_shallow_copy();
-	copy_constructor_deep_copy();
+	//copy_constructor_deep_copy();
+	default_delete();
 }
 
 void oop_example() {
@@ -32,6 +36,14 @@ void oop_example() {
 
 	delete c2;
 	std::cout << std::endl << "Number of Cars: " << Car::get_total_cars() << std::endl;
+}
+
+void delegating_constructor() {
+	Car c{ 6 };
+	/*       CALLS:       */
+	// Car(float,passengers)
+	// Car(float)
+	c.dashboard();
 }
 
 void copy_constructor_shallow_copy() {
@@ -93,4 +105,15 @@ void copy_constructor_deep_copy() {
 
 	//j = add_integer(10, 20);
 	//std::cout << j.get_value() << std::endl;
+}
+
+void default_delete() {
+	Integer temp;                                      //Using default constructor
+	std::cout << temp.get_value() << std::endl;
+	//temp.set_value(12.44f);                          //Implicity casting allow
+	//std::cout << temp.get_value() << std::endl;      
+
+	//deleting implicit casting
+	temp.set_value(33);                                //Only Accepts int
+	std::cout << temp.get_value() << std::endl;
 }

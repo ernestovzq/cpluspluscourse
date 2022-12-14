@@ -189,6 +189,16 @@
 * and any object which address is in a const pointer, behaves like a const object
 */
 
+
+/*                        DELEGATING CONSTRUCTOR
+* Constructor that allows to call another constructor
+* Useful when we have different constructors and each one of them has to make a common
+* initialization:
+*  1. We can write the common initialization in one constructor
+*  2. Invoke this constructor from all other constructors
+* 
+* It reduce code duplication
+*/
 int Car::total_cars{ 0 };
 
 Car::Car()
@@ -203,11 +213,18 @@ Car::~Car()
 	std::cout << "~Car()" << std::endl;
 }
 
-Car::Car(float fuel)
+Car::Car(float fuel):Car(fuel,0)
 {
-	total_cars++;
+	//delegating operation to the other constructor
 	std::cout << "Car(float)" << std::endl;
+}
+
+Car::Car(float fuel, int passengers)
+{
+	std::cout << "Car(float,int)" << std::endl;
+	++total_cars;
 	this->fuel = fuel;
+	this->passengers = passengers;
 }
 
 void Car::fill_fuel(float amount)

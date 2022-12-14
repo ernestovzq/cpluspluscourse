@@ -13,6 +13,7 @@ public:
 	Car();
 	~Car();
 	Car(float fuel);
+	Car(float fuel, int passengers);
 	void fill_fuel(float amount);
 	void accelerate();
 	void brake();

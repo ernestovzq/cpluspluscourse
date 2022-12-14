@@ -1,0 +1,7 @@
+﻿  Integer0.cpp
+  Source.cpp
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 19 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  03ClassesAndObjects.vcxproj -> C:\Users\luisv\OneDrive\Escritorio\cpluspluscourse\03ClassesAndObjects\x64\Release\03ClassesAndObjects.exe

@@ -21,9 +21,21 @@
     <ClCompile Include="oop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Integer0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Integer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="oop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Integer0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Integer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

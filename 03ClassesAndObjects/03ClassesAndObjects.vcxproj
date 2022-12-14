@@ -127,10 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Integer.cpp" />
+    <ClCompile Include="Integer0.cpp" />
     <ClCompile Include="oop.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Integer.h" />
+    <ClInclude Include="Integer0.h" />
     <ClInclude Include="oop.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

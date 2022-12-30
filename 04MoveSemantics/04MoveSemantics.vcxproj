@@ -127,11 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Integer01.h" />
+    <ClInclude Include="Integer02.h" />
     <ClInclude Include="lvalues_rvalues.h" />
+    <ClInclude Include="move_semantics.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Integer01.cpp" />
     <ClCompile Include="lvalues_rvalues.cpp" />
+    <ClCompile Include="move_semantics.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Integer02.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

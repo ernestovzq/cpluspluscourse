@@ -18,12 +18,30 @@
     <ClInclude Include="lvalues_rvalues.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Integer01.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="move_semantics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Integer02.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lvalues_rvalues.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="move_semantics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Integer01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Integer02.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

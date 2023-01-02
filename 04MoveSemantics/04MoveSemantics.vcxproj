@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -129,13 +129,19 @@
   <ItemGroup>
     <ClInclude Include="Integer01.h" />
     <ClInclude Include="Integer02.h" />
+    <ClInclude Include="Integer03.h" />
     <ClInclude Include="lvalues_rvalues.h" />
     <ClInclude Include="move_semantics.h" />
+    <ClInclude Include="Number.h" />
+    <ClInclude Include="rule_of_five.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Integer01.cpp" />
+    <ClCompile Include="Integer03.cpp" />
     <ClCompile Include="lvalues_rvalues.cpp" />
     <ClCompile Include="move_semantics.cpp" />
+    <ClCompile Include="Number.cpp" />
+    <ClCompile Include="rule_of_five.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Integer02.cpp" />
   </ItemGroup>

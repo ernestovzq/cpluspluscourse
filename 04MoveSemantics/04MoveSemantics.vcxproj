@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="copy_elision.h" />
     <ClInclude Include="Integer01.h" />
     <ClInclude Include="Integer02.h" />
     <ClInclude Include="Integer03.h" />
@@ -136,6 +137,7 @@
     <ClInclude Include="rule_of_five.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="copy_elision.cpp" />
     <ClCompile Include="Integer01.cpp" />
     <ClCompile Include="Integer03.cpp" />
     <ClCompile Include="lvalues_rvalues.cpp" />

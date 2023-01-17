@@ -135,6 +135,7 @@
     <ClInclude Include="move_semantics.h" />
     <ClInclude Include="Number.h" />
     <ClInclude Include="rule_of_five.h" />
+    <ClInclude Include="std_move.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="copy_elision.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="rule_of_five.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Integer02.cpp" />
+    <ClCompile Include="std_move.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

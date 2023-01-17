@@ -39,6 +39,9 @@
     <ClInclude Include="copy_elision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="std_move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lvalues_rvalues.cpp">
@@ -66,6 +69,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="copy_elision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="std_move.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

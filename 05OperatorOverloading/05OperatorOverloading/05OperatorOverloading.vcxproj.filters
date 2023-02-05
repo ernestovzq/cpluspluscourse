@@ -30,6 +30,9 @@
     <ClCompile Include="global_overloads.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="smart_pointers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basics.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="global_overloads.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="smart_pointers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

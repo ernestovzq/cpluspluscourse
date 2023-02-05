@@ -48,19 +48,6 @@ void primitive_argument() {
 	
 }
 
-std::ostream& operator <<(std::ostream &out, const Integer& obj) {
-	out << obj.get_value() ;
-	return out;
-
-}
-
-std::istream& operator >>(std::istream& in, Integer& obj) {
-	int value;
-	in >> value;
-	obj.set_value(value);
-	return in;
-}
-
 void insertion_overloading() {
 	//Insertion Operator
 	/* std::cout << Integer(2) << std::endl;

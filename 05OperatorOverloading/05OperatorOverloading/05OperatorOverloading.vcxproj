@@ -131,6 +131,7 @@
     <ClCompile Include="basics.cpp" />
     <ClCompile Include="global_overloads.cpp" />
     <ClCompile Include="Integer.cpp" />
+    <ClCompile Include="smart_pointers.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +139,7 @@
     <ClInclude Include="basics.h" />
     <ClInclude Include="global_overloads.h" />
     <ClInclude Include="Integer.h" />
+    <ClInclude Include="smart_pointers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

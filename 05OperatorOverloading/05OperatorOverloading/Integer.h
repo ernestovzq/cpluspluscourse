@@ -1,5 +1,11 @@
 #pragma once
 
+#include <iostream>
+
+class Integer;
+std::ostream& operator <<(std::ostream& out, const Integer& obj);
+std::istream& operator >>(std::istream& in, Integer& obj);
+
 class Integer {
 	int* ptr{};
 public:
@@ -18,6 +24,4 @@ public:
 	int get_value() const; 
 	void set_value(int val);
 	~Integer();
-
-
 };
